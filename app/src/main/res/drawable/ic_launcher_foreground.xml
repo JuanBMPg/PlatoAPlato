@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Plato visto desde arriba con un gajo de progreso (anillo de calorías) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M54,30a24,24 0,1 1,0 48a24,24 0,1 1,0 -48z" />
+    <path android:fillColor="#2F7A55"
+        android:pathData="M54,38a16,16 0,1 1,0 32a16,16 0,1 1,0 -32z" />
+    <path android:fillColor="#E0A21B"
+        android:pathData="M54,30a24,24 0,0 1,24 24h-8a16,16 0,0 0,-16 -16z" />
+</vector>

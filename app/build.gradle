@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    namespace 'com.platoaplato.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.platoaplato.app'
+        minSdk 26
+        targetSdk 35
+        versionCode 2
+        versionName '1.1'
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // Firma la release con la clave de depuración para poder instalarla directamente.
+            // Antes de subirla a Google Play hay que crear una clave propia (Fase 5).
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.13.1'
+
+    // Firebase: Gemini sin clave (AI Logic), protección contra abusos (App Check) y errores (Crashlytics)
+    implementation platform('com.google.firebase:firebase-bom:34.3.0')
+    implementation 'com.google.firebase:firebase-ai'
+    implementation 'com.google.firebase:firebase-appcheck-playintegrity'
+    implementation 'com.google.firebase:firebase-crashlytics'
+
+    // Necesario para usar el SDK de Firebase AI desde Java (ListenableFuture)
+    implementation 'com.google.guava:guava:33.4.8-android'
+    implementation 'org.reactivestreams:reactive-streams:1.0.4'
+}

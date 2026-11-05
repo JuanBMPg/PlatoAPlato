@@ -1,0 +1,17 @@
+.gradle/
+build/
+app/build/
+local.properties
+.idea/
+*.iml
+
+# Configuración de Firebase (cada desarrollador usa la suya)
+app/google-services.json
+
+# Varios
+*.apk
+*.aab
+*.keystore
+*.jks
+.DS_Store
+Thumbs.db
